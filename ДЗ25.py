@@ -3,18 +3,61 @@
 # ключа, название столицы в качестве значения. Необходимо реализовать: добавление данных, удаление данных, поиск
 # данных, редактирование данных, сохранение и загрузку данных (используя упаковку и распаковку).
 
-import json
-countryCapital = {
-    "Ukraine": ["Kyiv"],
-    "Greece": ["Athens"]
-}
-def writeFile(file,data):
-    with open(file, 'w') as file:
-        json.dump(data, file, indent=4)
+# import json
+# countryCapital = {
+#     "Ukraine": ["Kyiv"],
+#     "Greece": ["Athens"]
+# }
+# def writeFile(file,data):
+#     with open(file, 'w') as file:
+#         json.dump(data, file, indent=4)
+#
+# def readFile(file):
+#     with open(file, 'r') as file:
+#         return json.load(file)
+#
+# writeFile("ДЗ25.json",countryCapital)
+#
+# choice = int(input("Enter 1- add, 2- delete, 3- search, 4 - editing, 5 - saving, 6 - loading : "))
+# if choice == 1:
+#     country = input("Enter country: ")
+#     capital = input("Enter the capital: ")
+#     def addInformation(file,country,capital):
+#         if country in file:
+#             print("The country is found")
+#         else:
+#             countryCapital[country] = [capital]
+#     addInformation("ДЗ25.json",country,capital)
+#
+#     writeFile("ДЗ25.json",countryCapital)
+# if choice == 2:
+#     country = input("Enter country to delete: ")
+#     def deleteInformation(file,country):
+#        del countryCapital[country]
+#     deleteInformation("ДЗ25.json",country)
+#
+#     writeFile("ДЗ25.json",countryCapital)
+# if choice == 3:
+#     country = input("Enter country to search: ")
+#     def searchInformation(file,country):
+#         if country in countryCapital:
+#           print(f"{country} : {country[capital]}")
+#         else:
+#           print(f"{country} is not found.")
+#     searchInformation("ДЗ25.json",country)
+# if choice == 4:
+#     country = input("Enter country to edit: ")
+#     capital = input("Enter the capital to edit: ")
+#     def editInformation(file, country, capital):
+#       countryCapital[country] = [capital]
+#     editInformation("ДЗ25.json", country, capital)
+#
+#     writeFile("ДЗ25.json", countryCapital)
+# if choice == 5:
+#
 
-def readFile(file):
-    with open(file, 'r') as file:
-        return json.load(file)
+
+
 
 
 
@@ -28,23 +71,9 @@ def readFile(file):
 # программы — по команде пользователя). При старте программы происходит загрузка списка сотрудников из
 # указанного пользователем файла.
 
-# import pickle
-# class Employee:
-#     def __init__(self, name, surname, age, position):
-#         self.name = name
-#         self.surname = surname
-#         self.age = age
-#         self.position = position
-# class EmployeeSystem:
-#     def __init__(self, file_path):
-#         self.file_path = file_path
-#         self.employees = []
-#     def load(self):
-#         try:
-#             with open(self.file_path, 'rb') as file:
-#                 self.employees = pickle.load(file)
-#         except:
-#             pass
-#     def save(self):
+import json
+employees = {
+    "id1": ["Kyiv"],
+    "Greece": ["Athens"]
 
 
